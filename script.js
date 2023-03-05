@@ -28,7 +28,7 @@ async function getPosts() {
 document.addEventListener('DOMContentLoaded', getPosts);
 
 window.onscroll = () => {
-  if(!document.body.scollTop) {
+  if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
     getPosts();
   }
 };
