@@ -27,4 +27,8 @@ async function getPosts() {
 
 document.addEventListener('DOMContentLoaded', getPosts);
 
-window.onscroll = getPosts;
+window.onscroll = () => {
+  if(!document.body.scollTop) {
+    getPosts();
+  }
+};
