@@ -13,7 +13,7 @@ async function getPosts() {
         ${postMeta.title} (${postMeta.url.replace(/^(https?:\/\/[^\/]+).*$/, '$1')})</a>
         <br>
         <a href="https://news.ycombinator.com/item?id=${postMeta.id}">
-          <h5>by ${postMeta.by} | ${postMeta.kids.length} comments</h5>
+          <h5>${postMeta.score} points by ${postMeta.by} | ${postMeta.kids.length} comments</h5>
         </a></br>`;
       list.appendChild(li);
     }
